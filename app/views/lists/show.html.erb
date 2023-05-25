@@ -1,0 +1,10 @@
+<h1><%= @list.name %></h1>
+<br>
+
+<ul>
+  <% @list.bookmarks.each do |bookmark| %>
+    <li><%= bookmark.comment %></li>
+  <% end %>
+</ul>
+
+<p><%= link_to "Create bookbmark", new_list_bookmark(@list_id) %></p>
